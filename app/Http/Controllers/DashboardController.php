@@ -9,9 +9,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $host   = 'id-24.hostddns.us:10642';
-        $user   = 'nusantara';
-        $pass   = '@Nusantara1234';
+        $host   = env('MIKROTIK_HOST ');
+        $user   = env('MIKROTIK_USER ');
+        $pass   = env('MIKROTIK_PASS ');
         $router = new RouterOS();
         $router->debug('false');
         if ($router->connect($host, $user, $pass)) {
