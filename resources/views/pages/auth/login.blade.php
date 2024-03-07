@@ -19,7 +19,7 @@
                 <div class="input-group mb-3">
                     <input type="text" name="email"
                         class="form-control form-control-lg bg-light fs-6 @error('email') is-invalid @enderror"
-                        placeholder="Email address">
+                        placeholder="Email address" value="{{ old('email') }}">
                     @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -29,7 +29,7 @@
                 <div class="input-group mb-1">
                     <input type="password" name="password"
                         class="@error('password') is-invalid @enderror form-control form-control-lg bg-light fs-6"
-                        placeholder="Password" value="{{ old('email') }}">
+                        placeholder="Password" >
                     @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}
