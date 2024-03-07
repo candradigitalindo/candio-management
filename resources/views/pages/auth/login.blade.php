@@ -36,6 +36,7 @@
                         <p>Waktunya kembali bekerja!</p>
                     </div>
                     <form action="{{ route('login') }}" method="POST">
+                        @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control form-control-lg bg-light fs-6"
                                 placeholder="Email address">
@@ -55,7 +56,7 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <button class="btn btn-lg primary w-100 fs-6 text-white">Login</button>
+                            <button class="btn btn-lg btn-primary primary w-100 fs-6 text-white">Login</button>
                         </div>
                     </form>
                 </div>
